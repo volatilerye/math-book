@@ -1,0 +1,61 @@
+\documentclass[a5paper]{ltjsbook}
+\usepackage[margin=18truemm]{geometry}
+\usepackage[pdfbox]{gentombow}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{framed}
+
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}[section]
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{ass}[thm]{仮定}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注}
+
+\newtheorem*{thm*}{定理}
+\newtheorem*{lem*}{補題}
+\newtheorem*{prop*}{命題}
+\newtheorem*{cor*}{系}
+\newtheorem*{ass*}{仮定}
+\newtheorem*{conj*}{予想}
+\newtheorem*{dfn*}{定義}
+\newtheorem*{rem*}{注}
+\renewcommand{\proofname}{\textbm{証明}}
+
+% 証明のタイトルを日本語に変更
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item\relax
+  {\bmseries
+  #1\@addpunct{.}}\hspace\labelsep\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+\begin{document}
+
+\chapter{位相空間}
+\section{位相の定義}
+
+\begin{framed}
+    \begin{dfn}[タイトル]
+        キャプション
+    \end{dfn}
+\end{framed}
+
+
+\begin{align}
+    \int_{X\times Y}f(x,y)\mu\times\nu(dx,dy)
+     & = \int_{X}\left\{\int_Yf(x,y)\nu(dy)\right\}\mu(dx) \notag \\
+     & = \int_{Y}\left\{\int_Xf(x,y)\mu(dx)\right\}\nu(dy).
+\end{align}
+
+\end{document}
