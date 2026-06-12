@@ -1,0 +1,23 @@
+\section{位相の定義}
+
+\begin{framed}
+    \begin{dfn}[開集合による位相の定義]
+        $S$ を空でない集合とする. $2^S$ の部分集合 $\mathcal{O}$ が以下の条件を満たすとき, $\mathcal{O}$ を $S$ の \textbf{位相} であるといい, 位相 $\mathcal{O}$ が与えられた集合 $S$ を \textbf{位相空間} という.
+
+        また, 位相が与えられた集合 $S$ を \textbf{台集合}, あるいは単に \textbf{台} という.
+        \begin{enumerate}
+            \item $\displaystyle \emptyset, S\in\mathcal{O}.$
+            \item $O_1, O_2\in\mathcal{O}$ ならば $O_1\cap O_2\in\mathcal{O}.$
+            \item 任意の添字 $\lambda\in\Lambda$ において $O_\lambda\in\mathcal{O}$ ならば $\displaystyle\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
+        \end{enumerate}
+
+
+    \end{dfn}
+\end{framed}
+
+
+\begin{align}
+    \int_{X\times Y}f(x,y)\mu\times\nu(dx,dy)
+     & = \int_{X}\left\{\int_Yf(x,y)\nu(dy)\right\}\mu(dx) \notag \\
+     & = \int_{Y}\left\{\int_Xf(x,y)\mu(dx)\right\}\nu(dy).
+\end{align}

@@ -2,7 +2,9 @@
 \usepackage[margin=18truemm]{geometry}
 \usepackage[pdfbox]{gentombow}
 \usepackage{amsthm}
+\usepackage{amsfonts}
 \usepackage{mathtools}
+\usepackage{mathfont}
 \usepackage{framed}
 
 
@@ -43,19 +45,7 @@
 \begin{document}
 
 \chapter{位相空間}
-\section{位相の定義}
 
-\begin{framed}
-  \begin{dfn}[タイトル]
-    キャプション
-  \end{dfn}
-\end{framed}
-
-
-\begin{align}
-  \int_{X\times Y}f(x,y)\mu\times\nu(dx,dy)
-   & = \int_{X}\left\{\int_Yf(x,y)\nu(dy)\right\}\mu(dx) \notag \\
-   & = \int_{Y}\left\{\int_Xf(x,y)\mu(dx)\right\}\nu(dy).
-\end{align}
+\input{content/topology-1}
 
 \end{document}
