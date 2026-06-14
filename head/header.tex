@@ -1,0 +1,59 @@
+\usepackage[margin=18truemm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{mathfont}
+\usepackage{framed}
+
+
+
+\newtheoremstyle{mydefinition}% name
+{\topsep}% Space above
+{\topsep}% Space below
+{\normalfont}% Body font
+{}% Indent amount
+{\bfseries}% Head font
+{}% Punctuation after head ← ここを空にする
+{.5em}% Space after head
+{}% Head spec
+
+\theoremstyle{mydefinition}
+\newtheorem{thm}{定理}[section]
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{ass}[thm]{仮定}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注}
+\newtheorem{exa}[thm]{例}
+
+\newtheorem*{thm*}{定理}
+\newtheorem*{lem*}{補題}
+\newtheorem*{prop*}{命題}
+\newtheorem*{cor*}{系}
+\newtheorem*{ass*}{仮定}
+\newtheorem*{conj*}{予想}
+\newtheorem*{dfn*}{定義}
+\newtheorem*{rem*}{注}
+\newtheorem*{exa*}{例}
+
+\renewcommand{\proofname}{\textbf{証明}}
+
+
+% 証明のタイトルを日本語に変更
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+    \pushQED{\qed}%
+    \normalfont \topsep6\p@\@plus6\p@\relax
+    \trivlist
+    \item\relax
+    {\bfseries
+        #1}\hspace\labelsep\ignorespaces
+}{%
+    \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
