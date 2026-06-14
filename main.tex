@@ -8,7 +8,18 @@
 \usepackage{framed}
 
 
-\theoremstyle{definition}
+
+\newtheoremstyle{mydefinition}% name
+  {\topsep}% Space above
+  {\topsep}% Space below
+  {\normalfont}% Body font
+  {}% Indent amount
+  {\bfseries}% Head font
+  {}% Punctuation after head ← ここを空にする
+  {.5em}% Space after head
+  {}% Head spec
+
+\theoremstyle{mydefinition}
 \newtheorem{thm}{定理}[section]
 \newtheorem{lem}[thm]{補題}
 \newtheorem{prop}[thm]{命題}
@@ -27,6 +38,7 @@
 \newtheorem*{dfn*}{定義}
 \newtheorem*{rem*}{注}
 \renewcommand{\proofname}{\textbm{証明}}
+
 
 % 証明のタイトルを日本語に変更
 \makeatletter
