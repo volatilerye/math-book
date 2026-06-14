@@ -1,6 +1,7 @@
 \documentclass[a5paper]{ltjsbook}
 \usepackage[margin=18truemm]{geometry}
 \usepackage[pdfbox]{gentombow}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{mathtools}
@@ -40,7 +41,7 @@
 \newtheorem*{rem*}{注}
 \newtheorem*{exa*}{例}
 
-\renewcommand{\proofname}{\textbm{証明}}
+\renewcommand{\proofname}{\textbf{証明}}
 
 
 % 証明のタイトルを日本語に変更
@@ -50,12 +51,14 @@
   \normalfont \topsep6\p@\@plus6\p@\relax
   \trivlist
   \item\relax
-  {\bmseries
-  #1\@addpunct{.}}\hspace\labelsep\ignorespaces
+  {\bfseries
+  #1}\hspace\labelsep\ignorespaces
 }{%
   \popQED\endtrivlist\@endpefalse
 }
 \makeatother
+
+\renewcommand{\labelenumi}{(\arabic{enumi})}
 
 \begin{document}
 
