@@ -330,5 +330,8 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
+# vscode settings
+.vscode/
+
 # output PDF
 *.pdf
