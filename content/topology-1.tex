@@ -44,7 +44,7 @@
     \end{dfn}
 \end{framed}
 
-言い換えるならば, $\mathcal{O}$-開集合は 集合 $\{O^c\mid O\in\mathcal{O}\}$ の元である.
+言い換えるならば, $\mathcal{O}$-閉集合全体の集合は $\{O^c\mid O\in\mathcal{O}\}$ で表せられる.
 
 \begin{framed}
     \begin{thm}[閉集合]\label{thm::closed-set}
@@ -68,6 +68,14 @@
 
 逆に, 定理\ref{thm::closed-set}の3条件を満たす集合族 $\mathcal{A}$ が与えられたならば, $\mathcal{A}$ が $(S, \mathcal{O})$ の閉集合族であるような位相 $\mathcal{O}$ は一意に定まる.
 すなわち, $S$ を台とする位相空間は開集合族 $\mathcal{O}$ の代わりに閉集合族 $\mathcal{A}$ を定めても決定できる.
+
+\begin{rem*}
+    開集合の補集合は閉集合であるが, 開集合でない集合が閉集合であるとは限らない. 同様に閉集合でない集合が開集合であるとは限らない.
+    集合によっては開集合と閉集合のどちらでもない場合や, その両方であることもあり得る.
+
+    例えば任意の位相空間 $(S, \mathcal{O})$ において空集合 $\emptyset$ とその台集合 $S$ は開かつ閉集合である.
+    また, 離散空間 $(S, \{\emptyset, S\})$ において $\emptyset$ と $S$ を除く $S$ の任意の部分集合は閉集合でも開集合でもない.
+\end{rem*}
 
 \subsection{開核}
 $(S,\mathcal{O})$ を位相空間, $A$ を $S$ の部分集合とする. $A\in$
