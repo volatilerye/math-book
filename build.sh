@@ -13,23 +13,24 @@ while [ $# -gt 0 ]; do
     --clean|--c)
       CLEAN=1
       ;;
-    -h|--help)
-      cat <<EOF
-Usage: ./build.sh [OPTIONS]
-
-Options:
-  --tombo, --t    Build tombo-main.tex
-  --clean, --c    Remove auxiliary files after build
-  --help, -h      Show this help
-EOF
-      exit 0
+    --twice|--2)
+      RUNS=2
       ;;
-    *)
-      echo "Unknown option: $1" >&2
-      exit 1
-      ;;
+    # ...
   esac
   shift
+done
+
+i=1
+while [ "$i" -le "$RUNS" ]; do
+  lualatex \
+    --cmdx \
+    -file-line-error \
+    -synctex=1 \
+    -interaction=nonstopmode \
+    -halt-on-error \
+    "$DOC"
+  i=$((i + 1))
 done
 
 lualatex \
