@@ -4,6 +4,7 @@ set -eu
 
 DOC="main.tex"
 CLEAN=0
+RUNS=1
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -33,13 +34,6 @@ while [ "$i" -le "$RUNS" ]; do
   i=$((i + 1))
 done
 
-lualatex \
-  --cmdx \
-  -file-line-error \
-  -synctex=1 \
-  -interaction=nonstopmode \
-  -halt-on-error \
-  "$DOC"
 
 if [ "$CLEAN" -eq 1 ]; then
   find . \
