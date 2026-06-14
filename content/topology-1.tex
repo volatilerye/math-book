@@ -3,15 +3,15 @@
 \subsection{開集合}
 
 \begin{framed}
-  \begin{dfn}[位相]
-    $S$ を空でない集合とする. $2^S$ の部分集合 $\mathcal{O}$ が以下の条件を満たすとき, $\mathcal{O}$ を $S$ の \textbf{位相} であるといい, 位相 $\mathcal{O}$ が与えられた集合 $S$ を \textbf{位相空間} という.
+    \begin{dfn}[位相]
+        $S$ を空でない集合とする. $2^S$ の部分集合 $\mathcal{O}$ が以下の条件を満たすとき, $\mathcal{O}$ を $S$ の \textbf{位相} であるといい, 位相 $\mathcal{O}$ が与えられた集合 $S$ を \textbf{位相空間} という.
 
-    \begin{enumerate}
-      \item $\displaystyle \emptyset, S\in\mathcal{O}.$
-      \item $O_1, O_2\in\mathcal{O}$ ならば $O_1\cap O_2\in\mathcal{O}.$
-      \item 任意の添字 $\lambda\in\Lambda$ において $O_\lambda\in\mathcal{O}$ ならば $\displaystyle\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
-    \end{enumerate}
-  \end{dfn}
+        \begin{enumerate}
+            \item $\displaystyle \emptyset, S\in\mathcal{O}.$
+            \item $O_1, O_2\in\mathcal{O}$ ならば $O_1\cap O_2\in\mathcal{O}.$
+            \item 任意の添字 $\lambda\in\Lambda$ において $O_\lambda\in\mathcal{O}$ ならば $\displaystyle\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
+        \end{enumerate}
+    \end{dfn}
 \end{framed}
 
 位相空間は $(S,\mathcal{O})$ のように書くが, 文脈から与えられている位相が明らかな場合は単に $S$ と書くこともある.
@@ -19,13 +19,30 @@
 
 また, $\mathcal{O}$ に属する $S$ の部分集合を \textbf{$\mathcal{O}$-開集合} (あるいは単に \textbf{開集合}) という.
 
+\begin{exa}
+    $\mathcal{O}=\{\emptyset,S\}$ は $S$ の位相の条件を満たす. この位相を \textbf{密着位相} といい, 位相空間 $(S, \{\emptyset, S\})$ を \textbf{密着空間} という.
+\end{exa}
+
+\begin{exa}
+    $\mathcal{O}=2^S$ は $S$ の位相の条件を満たす. この位相を \textbf{離散位相} といい, 位相空間 $(S, 2^˝)$ を \textbf{離散空間} という.
+\end{exa}
+
+\begin{exa}
+    $(S, \mathcal{O})$ を位相空間, $A$ を空でない集合とする.
+    $\mathcal{O}_A=\{A\cap O\mid O\in\mathcal{O}\}$ は $S$ の位相の条件を満たす. この位相を集合 $A$ 上の $\mathcal{O}$ に関する \textbf{相対位相} といい, 位相空間 $(A, \mathcal{O}_A)$ を $(S, \mathcal{O})$ の \textbf{部分空間} という.
+
+\end{exa}
+
+
 \subsection{閉集合}
 
 $\mathcal{O}$-開集合の補集合を \textbf{$\mathcal{O}$-閉集合} (あるいは単に \textbf{閉集合}) という.
 
 
 \begin{align}
-  \int_{X\times Y}f(x,y)\mu\times\nu(dx,dy)
-   & = \int_{X}\left\{\int_Yf(x,y)\nu(dy)\right\}\mu(dx) \notag \\
-   & = \int_{Y}\left\{\int_Xf(x,y)\mu(dx)\right\}\nu(dy).
+    \int_{X\times Y}f(x,y)\mu\times\nu(dx,dy)
+     & = \int_{X}\left\{\int_Yf(x,y)\nu(dy)\right\}\mu(dx) \notag \\
+     & = \int_{Y}\left\{\int_Xf(x,y)\mu(dx)\right\}\nu(dy).
 \end{align}
+
+\subsection{sss}
