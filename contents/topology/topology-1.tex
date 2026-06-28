@@ -4,34 +4,33 @@
 
 \begin{framed}
     \begin{dfn}[位相の定義と開集合]\label{dfn::topology}
-        $S$ を空でない集合とする. $2^S$ の部分集合 $\mathcal{O}$ が以下の条件を満たすとき, $\mathcal{O}$ を $S$ の \textbf{位相} であるといい, 位相 $\mathcal{O}$ が与えられた集合 $S$ を \textbf{位相空間} という.
+        $S$を空でない集合とする.$2^S$の部分集合$\mathcal{O}$が以下の条件を満たすとき,$\mathcal{O}$を$S$の\textbf{位相}であるといい,位相$\mathcal{O}$が与えられた集合$S$を\textbf{位相空間}という.
 
         \begin{enumerate}
-            \item $\displaystyle \emptyset, S\in\mathcal{O}.$
-            \item $O_1, O_2\in\mathcal{O}$ ならば $O_1\cap O_2\in\mathcal{O}.$
-            \item 任意の添字 $\lambda\in\Lambda$ において $O_\lambda\in\mathcal{O}$ ならば $\displaystyle\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
+            \item $\displaystyle\emptyset,S\in\mathcal{O}.$
+            \item $O_1,O_2\in\mathcal{O}$ならば$O_1\cap O_2\in\mathcal{O}.$
+            \item 任意の添字$\lambda\in\Lambda$において$O_\lambda\in\mathcal{O}$ならば$\displaystyle\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
         \end{enumerate}
 
-        $S$ を $\textbf{台}$ (または \textbf{台集合}) といい, $S$ の元を \textbf{点} という.
-        また, $\mathcal{O}$ に属する $S$ の部分集合を \textbf{$\mathcal{O}$-開集合} (あるいは単に \textbf{開集合}) という.
+        $S$を$\textbf{台}$(または\textbf{台集合})といい,$S$の元を\textbf{点}という.
+        また,$\mathcal{O}$に属する$S$の部分集合を\textbf{$\mathcal{O}$-開集合}(あるいは単に\textbf{開集合})という.
 
     \end{dfn}
 \end{framed}
 
-
-位相空間は $(S,\mathcal{O})$ のように書くが, 文脈から与えられている位相が明らかな場合は単に $S$ と書くこともある.
+位相空間は$(S,\mathcal{O})$のように書くが,文脈から与えられている位相が明らかな場合は単に$S$と書くこともある.
 
 \begin{exa}
-    $\mathcal{O}=\{\emptyset,S\}$ は $S$ の位相の条件を満たす. この位相を \textbf{密着位相} といい, 位相空間 $(S, \{\emptyset, S\})$ を \textbf{密着空間} という.
+    $\mathcal{O}=\{\emptyset,S\}$は$S$の位相の条件を満たす.この位相を\textbf{密着位相}といい,位相空間$(S,\{\emptyset,S\})$を\textbf{密着空間}という.
 \end{exa}
 
 \begin{exa}
-    $\mathcal{O}=2^S$ は $S$ の位相の条件を満たす. この位相を \textbf{離散位相} といい, 位相空間 $(S, 2^S)$ を \textbf{離散空間} という.
+    $\mathcal{O}=2^S$は$S$の位相の条件を満たす.この位相を\textbf{離散位相}といい,位相空間$(S,2^S)$を\textbf{離散空間}という.
 \end{exa}
 
 \begin{exa}
-    $(S, \mathcal{O})$ を位相空間, $A$ を空でない集合とする.
-    $\mathcal{O}_A=\{A\cap O\mid O\in\mathcal{O}\}$ は $S$ の位相の条件を満たす. この位相を集合 $A$ 上の $\mathcal{O}$ に関する \textbf{相対位相} といい, 位相空間 $(A, \mathcal{O}_A)$ を $(S, \mathcal{O})$ の \textbf{部分空間} という.
+    $(S,\mathcal{O})$を位相空間,$A$を空でない集合とする.
+    $\mathcal{O}_A=\{A\cap O\mid O\in\mathcal{O}\}$は$S$の位相の条件を満たす.この位相を集合$A$上の$\mathcal{O}$に関する\textbf{相対位相}といい,位相空間$(A,\mathcal{O}_A)$を$(S,\mathcal{O})$の\textbf{部分空間}という.
 
 \end{exa}
 
@@ -40,54 +39,54 @@
 
 \begin{framed}
     \begin{dfn}[位相の定義と開集合]\label{dfn::closed-set}
-        $\mathcal{O}$-開集合の補集合を \textbf{$\mathcal{O}$-閉集合} (あるいは単に \textbf{閉集合}) という.
+        $\mathcal{O}$-開集合の補集合を\textbf{$\mathcal{O}$-閉集合}(あるいは単に\textbf{閉集合})という.
     \end{dfn}
 \end{framed}
 
-言い換えるならば, $\mathcal{O}$-閉集合全体の集合は $\{O^c\mid O\in\mathcal{O}\}$ で表せられる.
+言い換えるならば,$\mathcal{O}$-閉集合全体の集合は$\{O^c\mid O\in\mathcal{O}\}$で表せられる.
 
 \begin{framed}
     \begin{thm}[閉集合]\label{thm::closed-set}
-        $(S,\mathcal{O})$ を位相空間とする. $S$ の閉集合全体の集合を $\mathcal{A}$ としたとき, $\mathcal{A}$ は次を満たす.
+        $(S,\mathcal{O})$を位相空間とする.$S$の閉集合全体の集合を$\mathcal{A}$としたとき,$\mathcal{A}$は次を満たす.
 
         \begin{enumerate}
-            \item $\displaystyle \emptyset, S\in\mathcal{A}.$
-            \item $A_1, A_2\in\mathcal{A}$ ならば $A_1\cup A_2\in\mathcal{A}.$
-            \item 任意の添字 $\lambda\in\Lambda$ において $A_\lambda\in\mathcal{A}$ ならば $\displaystyle\bigcap_{\lambda\in\Lambda}A_\lambda\in\mathcal{A}.$
+            \item$\displaystyle\emptyset,S\in\mathcal{A}.$
+            \item$A_1,A_2\in\mathcal{A}$ならば$A_1\cup A_2\in\mathcal{A}.$
+            \item 任意の添字$\lambda\in\Lambda$において$A_\lambda\in\mathcal{A}$ならば$\displaystyle\bigcap_{\lambda\in\Lambda}A_\lambda\in\mathcal{A}.$
         \end{enumerate}
     \end{thm}
 \end{framed}
 
 \begin{proof}
-    それぞれ開集合の定義と de Morgan の法則から直ちに導かれる. 例えば(3)は次のように示される.
+    それぞれ開集合の定義とde Morganの法則から直ちに導かれる.例えば(3)は次のように示される.
 
-    $A_\lambda^c=O_\lambda$ とすれば, 定義\ref{dfn::topology}(3)より
+    $A_\lambda^c=O_\lambda$とすれば,定義\ref{dfn::topology}(3)より
     $$\displaystyle\bigcup_{\lambda\in\Lambda}{A^c}=\left(\bigcap_{\lambda\in\Lambda}{A}\right)^c\in\mathcal{O}$$
-    である. よって閉集合の定義より $\displaystyle\bigcap_{\lambda\in\Lambda}A_\lambda\in\mathcal{A}.$
+    である.よって閉集合の定義より$\displaystyle\bigcap_{\lambda\in\Lambda}A_\lambda\in\mathcal{A}.$
 \end{proof}
 
-逆に, 定理\ref{thm::closed-set}の3条件を満たす集合族 $\mathcal{A}$ が与えられたならば, $\mathcal{A}$ が $(S, \mathcal{O})$ の閉集合族であるような位相 $\mathcal{O}$ は一意に定まる.
-すなわち, $S$ を台とする位相空間は開集合族 $\mathcal{O}$ の代わりに閉集合族 $\mathcal{A}$ を定めても決定できる.
+逆に,定理\ref{thm::closed-set}の3条件を満たす集合族$\mathcal{A}$が与えられたならば,$\mathcal{A}$が$(S,\mathcal{O})$の閉集合族であるような位相$\mathcal{O}$は一意に定まる.
+すなわち,$S$を台とする位相空間は開集合族$\mathcal{O}$の代わりに閉集合族$\mathcal{A}$を定めても決定できる.
 
 \begin{rem*}
-    開集合と閉集合は補集合の意味で双対の関係にあるが, 開集合でない集合が閉集合, あるいは閉集合でない集合が開集合であるとは限らない.
+    開集合と閉集合は補集合の意味で双対の関係にあるが,開集合でない集合が閉集合,あるいは閉集合でない集合が開集合であるとは限らない.
 
-    例えば, 任意の位相空間 $(S, \mathcal{O})$ において空集合 $\emptyset$ とその台集合 $S$ は開かつ閉集合である.
-    また, 離散空間のとき $\emptyset$ と $S$ を除く $S$ の任意の部分集合は閉集合でも開集合でもない.
+    例えば,任意の位相空間$(S,\mathcal{O})$において空集合$\emptyset$とその台集合$S$は開かつ閉集合である.
+    また,離散空間のとき$\emptyset$と$S$を除く$S$の任意の部分集合は閉集合でも開集合でもない.
 \end{rem*}
 
 \subsection{開核}
-$(S,\mathcal{O})$ を位相空間, $A$ を $S$ の部分集合とする. $A\in$
+$(S,\mathcal{O})$を位相空間,$A$を$S$の部分集合とする.$A\in$
 
 \begin{framed}
     \begin{dfn}[]\label{dfn::inner-op}
-        $(S,\mathcal{O})$ を位相空間, $A,B$ を $S$ の任意の部分集合とする. 次の条件を満たす演算 $\cdot^\circ$ を \textbf{閉核作用素} という.
+        $(S,\mathcal{O})$を位相空間,$A,B$を$S$の任意の部分集合とする.次の条件を満たす演算$\cdot^\circ$を\textbf{閉核作用素}という.
 
         \begin{enumerate}
-            \item $S^\circ=S.$
-            \item $A^\circ\subset A.$
-            \item $(A\cap B)^\circ=A^\circ\cap B^\circ.$
-            \item $(A^\circ)^\circ=A^\circ.$
+            \item$S^\circ=S.$
+            \item$A^\circ\subset A.$
+            \item$(A\cap B)^\circ=A^\circ\cap B^\circ.$
+            \item$(A^\circ)^\circ=A^\circ.$
         \end{enumerate}
     \end{dfn}
 \end{framed}
