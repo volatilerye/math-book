@@ -22,14 +22,13 @@ while [ $# -gt 0 ]; do
   shift
 done
 
-if ["$CLEAN" -eq 0]; then
-  mendex -r -c -g -s index.ist -p any main.idx
+if [ "$CLEAN" -eq 0 ]; then
+  mendex -r -c -g -s ./index.ist -p any ./main.idx
 fi
 
 i=1
 while [ "$i" -le "$RUNS" ]; do
   lualatex \
-    --cmdx \
     -file-line-error \
     -synctex=1 \
     -interaction=nonstopmode \
