@@ -1,0 +1,58 @@
+\section{集合の定義}
+
+\subsection{集合と元}
+
+\textbf{集合} (\textit{set})とはある特定の性質を備えて集められたものの集まりである.\footnote{
+    公理的集合論においてはより厳密に議論するための公理化が可能ではある.
+    しかしながら, 最初の章としていきなり公理へ踏み込むのは初学者向けとして些か過剰であるため, ここでは「ものの集まり」と naive な定義をすることにした.
+}
+集合を構成する1つ1つのものを \textbf{元} (\textbf{要素}, \textit{element}) といい, $a$ が集合 $A$ の元であることを $a\in A$ または $A\ni a$ で表す.
+このとき, $a$ は $A$ に \textbf{属する}, $a$ は $A$ に \textbf{含まれる} または $A$ は $a$ を \textbf{含む} (\textit{$a$ is an element of $A$, $a$ is a member of $A$, $a$ belongs to $A$, $a$ is in $A$, $A$ includes $a$, $A$ contains $a$}) という.
+$a\in A$ でないときは $a\not\in A$ または $A\not\ni a$ で表す.
+
+\begin{exa}
+    自然数全体の集まり, 整数全体の集まり, 有理数全体の集まり, 実数全体の集まり, 複素数全体の集まりはそれぞれ集合である.
+    これらは頻繁に用いられる代表的な集合であるため, 慣習的に黒板文字や太字で表すことが多い.
+    本書では以降, それぞれ $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$ で表す.
+\end{exa}
+
+\begin{rem*}
+    自然数が正の整数と非負整数 ($0$ 以上の整数) のどちらを指すのかは文献によるが,
+    本書は後者であり $0$ は自然数に含まれるものとする.
+    今後, 正の整数 ($1$ 以上の整数) 全体の集合を表したいときは $\mathbb{Z}_{>0}$ と表記することにする.
+\end{rem*}
+
+
+\begin{exa}
+    上記の注釈より $0\in\mathbb{N}, 0\not\in\mathbb{Z}_{>0}$ である.
+\end{exa}
+
+\begin{exa}
+    $i$ を虚数単位とすれば $i\not\in\mathbb{R}, i\in\mathbb{C}$ である.
+\end{exa}
+
+\begin{exa}
+    集合を構成する「もの」は必ずしも数である必要はない. 点の集まり, 図形の集まり, 関数の集まりなども集合になり得る.
+    ただし, それぞれの「もの」が集合に含まれるかははっきり定まっていなければならない. たとえば「大きい数の集まり」は
+    「大きい」の基準が主観によるものであり, たとえば $1000$ を含むかどうかが曖昧であるから集合にはならない.
+\end{exa}
+
+\section{写像}
+
+\begin{framed}
+    \begin{thm}
+        $f$ を集合 $A$ から $B$ への写像とするとき, 以下が成立する.
+        ただし, $P, P_1, P_2$ は $A$ の部分集合, $Q, Q_1, Q_2$ は $B$ の部分集合である.
+        \begin{equation}P_1\subset P_2\;\Longrightarrow\; f(P_1)\subset f(P_2).\label{thm::map-subset}\end{equation}
+        \begin{equation}f\left(P_1\cup P_2\right) = f(P_1)\cup f(P_2).\label{thm::map-cup}\end{equation}
+        \begin{equation}f\left(P_1\cap P_2\right) \subset f(P_1)\cap f(P_2).\label{thm::map-cap}\end{equation}
+        \begin{equation}f\left(P_1 - P_2\right) \supset f(P_1) - f(P_2).\label{thm::map-sub}\end{equation}
+        \begin{equation}Q_1\subset Q_2\;\Longrightarrow\; f^{-1}(Q_1)\subset f^{-1}(Q_2).\label{thm::inv-map-subset}\end{equation}
+        \begin{equation}f\left(Q_1\cup Q_2\right) = f^{-1}(Q_1)\cup f^{-1}(Q_2).\label{thm::inv-map-cup}\end{equation}
+        \begin{equation}f\left(Q_1\cap Q_2\right) = f^{-1}(Q_1)\cap f^{-1}(Q_2).\label{thm::inv-map-cap}\end{equation}
+        \begin{equation}f\left(Q_1- Q_2\right) = f^{-1}(Q_1)- f^{-1}(Q_2).\label{thm::inv-map-sub}\end{equation}
+        \begin{equation}f^{-1}(f(P))\supset P.\label{thm::map-domain}\end{equation}
+        \begin{equation}f(f^{-1}(Q))\subset Q.\label{thm::map-codomain}\end{equation}
+    \end{thm}
+\end{framed}
+
