@@ -75,18 +75,45 @@
     また,離散空間のとき$\emptyset$と$S$を除く$S$の任意の部分集合は閉集合でも開集合でもない.
 \end{rem*}
 
-\subsection{開核}
-$(S,\mathcal{O})$を位相空間,$A$を$S$の部分集合とする.$A\in$
+\subsection{内部・開核作用素}
+
+\begin{framed}
+    \begin{dfn}[]\label{dfn::inner}
+        $(S,\mathcal{O})$ を位相空間とする. $S$ の部分集合 $A$ において, $$\bigcup\{O\in\mathcal{O} \mid O\subset A\}$$ となる集合を $A$ の \textbf{内部} あるいは \textbf{開核} といい, $A^\circ$ で表す.
+    \end{dfn}
+\end{framed}
+
 
 \begin{framed}
     \begin{dfn}[]\label{dfn::inner-op}
-        $(S,\mathcal{O})$を位相空間,$A,B$を$S$の任意の部分集合とする.次の条件を満たす演算$\cdot^\circ$を\textbf{閉核作用素}という.
+        $(S,\mathcal{O})$ を位相空間, $A,B$ を $S$ の任意の部分集合とする. 次の条件を満たす写像 $i$ を \textbf{閉核作用素} という.
 
         \begin{enumerate}
-            \item$S^\circ=S.$
-            \item$A^\circ\subset A.$
-            \item$(A\cap B)^\circ=A^\circ\cap B^\circ.$
-            \item$(A^\circ)^\circ=A^\circ.$
+            \item $i(S)=S.$
+            \item $i(A)\subset A.$
+            \item $i(A\cap B)=i(A)\cap i(B).$
+            \item $(i\circ i)(A)=i(A).$
+        \end{enumerate}
+    \end{dfn}
+\end{framed}
+
+\begin{framed}
+    \begin{thm}[]\label{thm::inner-op}
+        定義\ref{dfn::inner}で定めた内部は定義\ref{dfn::inner-op}での4条件を満たす.
+    \end{thm}
+\end{framed}
+
+
+
+\begin{framed}
+    \begin{dfn}[]\label{dfn::closure-op}
+        $(S,\mathcal{O})$ を位相空間, $A,B$ を $S$ の任意の部分集合とする. 次の条件を満たす演算 $\overline{\cdot}$ を \textbf{閉包作用素} という.
+
+        \begin{enumerate}
+            \item $\overline{\emptyset}=\emptyset.$
+            \item $\overline{A}\supset A.$
+            \item $\overline{A\cup B}=\overline{A}\cup\overline{B}.$
+            \item $\overline{\overline{A}}=\overline{A}.$
         \end{enumerate}
     \end{dfn}
 \end{framed}
