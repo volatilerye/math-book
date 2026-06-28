@@ -7,46 +7,74 @@
     しかしながら,最初の章としていきなり公理へ踏み込むのは初学者向けとして些か過剰であるため,ここでは「ものの集まり」と naive な定義をすることにした.
 }
 集合を構成する1つ1つのものを\textbf{元}\index{げん@元}(\textbf{要素}\index{ようそ@要素},\textit{element})といい,
-$a$が集合$A$の元であることを$a\in A$または$A\ni a$で表す.
-このとき,$a$は$A$に\textbf{属する}\index{ぞくする@属する},
-$a$は$A$に\textbf{含まれる}\index{ふくまれる@含まれる}
-または$A$は$a$を\textbf{含む}\index{ふくむ@含む}(\textit{$a$ is an element of $A$, $a$ is a member of $A$, $a$ belongs to $A$, $a$ is in $A$, $A$ includes $a$, $A$ contains $a$})という.
+$a$ が集合 $A$ の元であることを $a\in A$ または $A\ni a$ で表す.
+このとき, $a$ は $A$ に\textbf{属する}\index{ぞくする@属する}(\textit{belong to}),
+$a$ は $A$ に\textbf{含まれる}\index{ふくまれる@含まれる}(\textit{contained})
+または $A$ は $a$ を\textbf{含む}\index{ふくむ@含む}(\textit{contain})という.
 $a\in A$ でないときは $a\not\in A$ または $A\not\ni a$ で表す.
 
 \begin{exa}
     自然数全体の集まり,整数全体の集まり,有理数全体の集まり,実数全体の集まり,複素数全体の集まりはそれぞれ集合である.
     これらは頻繁に用いられる代表的な集合であるため,慣習的に黒板文字や太字で表すことが多い.
-    本書では以降,それぞれ$\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}$で表す.
+    本書では以降,それぞれ $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}$ で表す.
 \end{exa}
 
 \begin{rem*}
-    自然数が正の整数と非負整数($0$以上の整数)のどちらを指すのかは文献によるが,
-    本書は後者であり$0$は自然数に含まれるものとする.
-    今後,正の整数($1$以上の整数)全体の集合を表したいときは$\mathbb{Z}_{>0}$と表記することにする.
+    自然数が正の整数と非負整数($0$ 以上の整数)のどちらを指すのかは文献によるが,
+    本書は後者であり $0$ は自然数に含まれるものとする.
+    今後,正の整数($1$ 以上の整数)全体の集合を表したいときは $\mathbb{Z}_{>0}$ と表記することにする.
 \end{rem*}
 
 
 \begin{exa}
-    上記の注釈より$0\in\mathbb{N},0\not\in\mathbb{Z}_{>0}$である.
+    上記の注釈より $0\in\mathbb{N},0\not\in\mathbb{Z}_{>0}$ である.
 \end{exa}
 
 \begin{exa}
-    $i$を虚数単位とすれば$i\not\in\mathbb{R},i\in\mathbb{C}$である.
+    $i$を虚数単位とすれば $i\not\in\mathbb{R},i\in\mathbb{C}$ である.
 \end{exa}
 
 \begin{exa}
-    集合を構成する「もの」は必ずしも数である必要はない.点の集まり,図形の集まり,関数の集まりなども集合になり得る.
+    集合を構成する「もの」は必ずしも数である必要はない.点,図形,関数,文字,概念の集まりなども集合になり得る.
+    たとえば, (大文字・小文字両方の)ラテン文字全体の集まりも集合である.
     ただし,それぞれの「もの」が集合に含まれるかははっきり定まっていなければならない.
     たとえば「大きい数の集まり」は
-    「大きい」の基準が主観によるものであり,たとえば$1000$を含むかどうかが曖昧であるから集合にはならない.
+    「大きい」の基準が主観によるものであり,たとえば $1000$ を含むかどうかが曖昧であるから集合にはならない.
+\end{exa}
+
+\subsection{集合の表記}
+
+集合を表すには,構成するすべての元を波括弧 $\{\}$ の中に書き並べる\textbf{外延的記法}\index{がいえんてききほう@外延的記法}(\textit{roster notation})と,
+特定の性質(条件)を持つものを集めて構成されたことを表す\textbf{内包的記法}\index{ないほうてききほう@内包的記法}(\textit{set-builder notation})の2つの方法がある.
+
+たとえば $0$ と $1$ の2つの元のみから構成された集合は外延的記法で
+$$\{0,1\}$$
+のように表す.ここで,外延的記法は $\{0,1,1\}$ のように同じ元を重複して書いてもよい.
+外延的記法は集合の全ての元が明確であるという利点がある.
+
+しかしながら元の個数が膨大で外延的記法が非効率的であったり,そもそも $\mathbb{N}$ のように元が無限に存在するために物理的に全ての元を書ききれない場合も存在する.
+その場合は内包的記法が有効であり,たとえばある性質$C$を満たすもの全体の集合は
+$$\{x\mid x \text{\;は性質$C$を満たす}\}$$
+のように表す.\footnote{
+    文献によっては$\mid$の代わりに $:$ や $;$ を用いる場合もある.
+}
+ここで$x$は\textbf{変数}\index{へんすう@変数}(\textit{variable})といい,他の文字に置き換えても構わない.
+また,性質 $C$ を満たし,かつ集合$A$に属するもの全体の集合は
+$$\{x\mid x\in A,x\text{\;は性質$C$を満たす}\}$$
+または
+$$\{x\in A\mid x\text{\;は性質$C$を満たす}\}$$
+のように表す.
+
+\begin{exa}
+    $0$ 以上 $1$ 未満の実数全体の集合は $\{x\mid x\in\mathbb{R},0\leq x<1\}$ または $\{x\in\mathbb{R}\mid 0\leq x<1\}$ で表す.
 \end{exa}
 
 \section{写像}
 
 \begin{framed}
     \begin{thm}
-        $f$を集合$A$から$B$への写像とするとき,以下が成立する.
-        ただし,$P,P_1,P_2$は$A$の部分集合,$Q,Q_1,Q_2$は$B$の部分集合である.
+        $f$ を集合 $A$ から $B$ への写像とするとき,以下が成立する.
+        ただし, $P,P_1,P_2$ は $A$ の部分集合, $Q,Q_1,Q_2$ は $B$ の部分集合である.
         \begin{equation}P_1\subset P_2\;\Longrightarrow\;f(P_1)\subset f(P_2).\label{thm::map-subset}\end{equation}
         \begin{equation}f\left(P_1\cup P_2\right)=f(P_1)\cup f(P_2).\label{thm::map-cup}\end{equation}
         \begin{equation}f\left(P_1\cap P_2\right)\subset f(P_1)\cap f(P_2).\label{thm::map-cap}\end{equation}
