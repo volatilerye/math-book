@@ -29,11 +29,11 @@ $a\in A$ でないときは $a\not\in A$ または $A\not\ni a$ で表す.\footn
 
 
 \begin{exa}
-    上記の注釈より $0\in\mathbb{N},0\not\in\mathbb{Z}_{>0}$ である.
+    上記の注釈より $0\in\mathbb{N},0\not\in\mathbb{Z}_{>0}$.
 \end{exa}
 
 \begin{exa}
-    $\sqrt{-1}$を虚数単位とすれば $\sqrt{-1}\not\in\mathbb{R},\sqrt{-1}\in\mathbb{C}$ である.
+    $\sqrt{-1}$を虚数単位とすれば $\sqrt{-1}\not\in\mathbb{R},\sqrt{-1}\in\mathbb{C}$.
 \end{exa}
 
 \begin{exa}
@@ -81,7 +81,34 @@ $$\{x\in A\mid x\text{\;は性質$C$を満たす}\}$$
     $\{n\in\mathbb{N}\mid n<0\}$ は空集合である.
 \end{exa}
 
+\section{包含関係}
 
+\section{べき集合}
+
+すべての元が集合であるような集合,すなわち「集合の集合」を\textbf{集合族}\index{しゅうごうぞく@集合族}(\textit{family of sets}) または \textbf{集合系}\index{しゅうごうけい@集合系}(\textit{family of sets})という.
+その中でも,ある集合から自然に定義できる集合がある.
+
+\begin{framed}
+    \begin{dfn}[べき集合]
+        $A$ を集合とする. $A$ の部分集合全体からなる集合を $A$ の\textbf{べき集合}\index{べきしゅうごう@べき集合}(\textit{power set}) といい, $2^A$ または $\mathcal{P}(A)$ で表す.
+    \end{dfn}
+\end{framed}
+
+
+\begin{exa}
+    例えば,
+    \begin{itemize}
+        \item $\mathcal{P}(\emptyset) = \{\emptyset\}.$
+        \item $\mathcal{P}(\{0\}) = \{\emptyset, \{0\}\}.$
+        \item $\mathcal{P}(\{0,1\}) = \{\emptyset, \{0\}, \{1\}, \{0, 1\}\}.$
+    \end{itemize}
+\end{exa}
+
+\begin{exa}
+    任意の集合 $A$ に対して, $\emptyset,A\in\mathcal{P}(A).$
+\end{exa}
+
+\exacise{1} $A$ を $n$ 個の元からなる集合とする. このとき, べき集合 $2^A$ の元は $2^n$ 個からなることを示せ.
 
 
 \section{写像}
