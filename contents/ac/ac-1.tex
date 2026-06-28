@@ -1,0 +1,27 @@
+\section{選択公理}
+
+$A_{\lambda\in\Lambda}$ を任意の集合族とする.このとき,
+\begin{equation}
+    \prod_{\lambda\in\Lambda}A_\lambda\neq\emptyset\;\Longrightarrow\;{}^\forall{\lambda\in\Lambda}\left[A_\lambda\neq\emptyset\right]
+    \label{prop::inv-axiom-choice}
+\end{equation}
+が成立することは,この命題の対偶が
+$${}^\exists{\lambda\in\Lambda}\left[A_\lambda=\emptyset\right]\;\Longrightarrow\;\prod_{\lambda\in\Lambda}A_\lambda=\emptyset$$
+であることから容易に示される.
+
+では, この命題\ref{prop::inv-axiom-choice}の逆は成り立つだろうか？
+この逆の命題には特別に選択公理という名前が与えられている.
+
+\begin{framed}
+    \begin{dfn}[選択公理]
+        $A_{\lambda\in\Lambda}$ を任意の集合族とする.このとき,次の命題を\textbf{選択公理}(\textit{axiom of choice})という.
+        \begin{equation}
+            {}^\forall{\lambda\in\Lambda}\left[A_\lambda\neq\emptyset\right]\;\Longrightarrow\;\prod_{\lambda\in\Lambda}A_\lambda\neq\emptyset\label{dfn::axiom-choice}
+        \end{equation}
+    \end{dfn}
+\end{framed}
+
+現代数学では基本的に選択公理は公理(すなわち無条件で認める前提)として認める場合がほとんどである.
+\footnote{
+    以降選択公理が必要な場合はその旨を明記する場合があるが,ある命題が選択公理を仮定しなければ証明も反証もできないこと(独立性という)を判定することは必ずしも容易ではない.
+}本書でも以降は選択公理を無条件に認めることとする.
